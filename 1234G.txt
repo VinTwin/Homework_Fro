@@ -1,0 +1,57 @@
+18:
+function handler(numbers) {
+  const result = numbers.map(num => Math.abs(num));
+  return result;
+}
+
+
+const numbers = [-1, 2, -3, 4, -5];
+const transformedNumbers = handler(numbers);
+console.log(transformedNumbers); // [1, 2, 3, 4, 5]
+
+
+19:
+function handler(numbers) {
+  const result = numbers.filter((num, index) => num !== index);
+  return result;
+}
+
+
+const numbers = [0, 1, 2, 3, 4];
+const filteredNumbers = handler(numbers);
+console.log(filteredNumbers); // [1, 2, 3, 4]
+
+20:
+function handler(array) {
+  
+  var uniqueArray = array.filter(function (value, index, self) {
+    return self.indexOf(value) === index;
+  });
+
+  return uniqueArray;
+}
+
+21:
+function handler(array) {
+  
+  var lengths = array.map(function (string) {
+    return string.length;
+  });
+
+  return lengths;
+}
+
+22:
+function handler(array, exponent) {
+  
+  var numbers = array.filter(function (element) {
+    return typeof element === 'number';
+  });
+
+  
+  var poweredNumbers = numbers.map(function (number) {
+    return Math.pow(number, exponent);
+  });
+
+  return poweredNumbers;
+}
